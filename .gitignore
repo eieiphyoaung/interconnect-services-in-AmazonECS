@@ -36,3 +36,13 @@ terraform.rc
 
 # Lock file
 .terraform.lock.hcl
+
+# macOS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Backup/temporary gitignore files
+.gitignore-*
