@@ -14,9 +14,9 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 
-# But include example files (templates for other developers)
-!*.tfvars.example
-!*.tfvars.example.json
+# Also exclude example files (if they contain sensitive data)
+*.tfvars.example
+*.tfvars.example.json
 
 # Ignore override files as they are usually used to override resources locally
 override.tf
