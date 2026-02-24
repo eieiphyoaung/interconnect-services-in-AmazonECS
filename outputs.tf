@@ -32,15 +32,15 @@ output "aws_profile" {
   value       = var.aws_profile
 }
 
-# Service Discovery
+# Service Connect DNS
 output "counting_service_dns" {
-  description = "Service discovery DNS for counting service (accessible from within VPC)"
-  value       = "counting.${var.service_discovery_namespace}"
+  description = "Service Connect DNS for counting service (accessible from within namespace)"
+  value       = "counting"
 }
 
 output "dashboard_service_dns" {
-  description = "Service discovery DNS for dashboard service (accessible from within VPC)"
-  value       = "dashboard.${var.service_discovery_namespace}"
+  description = "Service Connect DNS for dashboard service (accessible from within namespace)"
+  value       = "dashboard"
 }
 
 # Dashboard Access

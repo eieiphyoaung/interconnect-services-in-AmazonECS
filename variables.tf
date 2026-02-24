@@ -72,10 +72,22 @@ variable "cluster_name" {
   default     = "demo-cluster"
 }
 
-variable "service_discovery_namespace" {
-  description = "Service discovery namespace"
+variable "service_connect_namespace" {
+  description = "Service Connect namespace for ECS service mesh"
   type        = string
-  default     = "demo.local"
+  default     = "demo-services"
+}
+
+variable "enable_service_connect_tls" {
+  description = "Enable TLS for Service Connect (requires AWS Private CA)"
+  type        = bool
+  default     = false
+}
+
+variable "aws_pca_authority_arn" {
+  description = "ARN of AWS Private Certificate Authority for Service Connect TLS (leave empty to disable TLS)"
+  type        = string
+  default     = ""
 }
 
 variable "cpu_architecture" {

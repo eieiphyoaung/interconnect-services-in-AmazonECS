@@ -23,6 +23,7 @@ resource "aws_ecs_task_definition" "counting" {
       
       portMappings = [
         {
+          name          = "counting"
           containerPort = 9003
           hostPort      = 9003
           protocol      = "tcp"
@@ -85,6 +86,7 @@ resource "aws_ecs_task_definition" "dashboard" {
       
       portMappings = [
         {
+          name          = "dashboard"
           containerPort = 9002
           hostPort      = 9002
           protocol      = "tcp"
@@ -98,7 +100,7 @@ resource "aws_ecs_task_definition" "dashboard" {
         },
         {
           name  = "COUNTING_SERVICE_URL"
-          value = "http://counting.${var.service_discovery_namespace}:9003"
+          value = "http://counting:9003"
         }
       ]
 
